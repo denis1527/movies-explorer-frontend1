@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as React from 'react';
+import * as ReactDom from 'react-dom/client';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./components/App/App";
+
+
+import Main from "./components/Main/Main";
+import Movies from "./components/Movies/Movies";
+import SavedMovies from "./components/SavedMovies/SavedMovies";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
+import NotFound from "./components/NotFound/NotFound";
+import Preloader from "./components/Preloader/Preloader";
+
+import './index.css'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+    <Route path='/' element={<App />}>
+      <Route path='/' index={true} element={<Main />} />
+      <Route path='/movies' element={<Movies />} />
+      <Route path='/saved-movies' element={<SavedMovies />} />
+      <Route path='/profile' element={<Profile />} />
+    </Route>
+    <Route path='/signup' element={<Register />} />
+    <Route path='/signin' element={<Login />} />
+    <Route path='/spinner' element={<Preloader />} />
+    <Route path='/*' element={<NotFound />} />
+    </>
+
+  )
+)
+
+// ReactDom.render(<App />, document.getElementById('root'))
+
+const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)

@@ -1,0 +1,74 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import accountIcon from '../../assets/icons/navbar/account-icon-1.svg';
+
+import './menu.css';
+
+const Menu = ({ pathname, toggleMenu }) => {
+  return (
+      <section className="menu">
+        <ul className="menu_list">
+          {toggleMenu && (
+              <li className="menu_item">
+                <NavLink
+                    to="/"
+                    className={
+                      pathname === '/' ? 'menu_link_active menu_link' : 'menu_link'
+                    }
+                    style={{ fontWeight: pathname === '/' && '500' }}
+                >
+                  Главная
+                </NavLink>
+              </li>
+          )}
+          <li className="menu_item">
+            <NavLink
+                to="/movies"
+                className={
+                  pathname === '/movies'
+                      ? 'menu_link_active menu_link'
+                      : 'menu_link'
+                }
+                style={{ fontWeight: pathname === '/movies' && '500' }}
+            >
+              Фильмы
+            </NavLink>
+          </li>
+          <li className="menu_item">
+            <NavLink
+                to="/saved-movies"
+                className={
+                  pathname === '/saved-movies'
+                      ? 'menu_link_active menu_link'
+                      : 'menu_link'
+                }
+                style={{ fontWeight: pathname === '/saved-movies' && '500' }}
+            >
+              Сохранённые фильмы
+            </NavLink>
+          </li>
+        </ul>
+        <div className="menu_account">
+          <p
+              className={pathname === '/profile' && 'menu_link_active'}
+              style={{ fontWeight: pathname === '/profile' && '500' }}
+          >
+            <NavLink to="/profile">Аккаунт</NavLink>
+          </p>
+          <NavLink to="/profile">
+            <div
+                className={
+                  pathname === '/'
+                      ? 'menu_account_div menu_account_div_color_blue'
+                      : 'menu_account_div'
+                }
+            >
+              <img src={accountIcon} alt="profile image" />
+            </div>
+          </NavLink>
+        </div>
+      </section>
+  );
+};
+
+export default Menu;
