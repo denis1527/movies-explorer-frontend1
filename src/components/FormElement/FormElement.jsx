@@ -37,9 +37,9 @@ const FormElement = () => {
         <a href='/' className="form-element__logo">
           <img src={logo} alt="Logo"/>
         </a>
-        <h2 className="form-element__greeting">
+        <h1 className="form-element__greeting">
           {pathname === '/signup' ? 'Добро пожаловать!' : 'Рады видеть!'}
-        </h2>
+        </h1>
         <form className="form-element__form form-form-element">
           <fieldset className="form-form-element__fieldset">
             {pathname === '/signup' && (

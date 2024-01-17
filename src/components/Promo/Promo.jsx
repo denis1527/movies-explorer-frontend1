@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/images/header/image.png';
+import image from '../../assets/images/header/image.svg';
 import './promo.css';
 
 const Text = 'Учебный проект студента факультета \n Веб-разработки.';

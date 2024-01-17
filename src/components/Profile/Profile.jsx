@@ -23,7 +23,7 @@ const Profile = () => {
 
   return (
       <main className='profile'>
-        <h2 className='profile__heading'>Привет, {user.name}!</h2>
+        <h1 className='profile__heading'>Привет, {user.name}!</h1>
 
         <form className='profile__form form'>
           <label className='form__label'>

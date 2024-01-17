@@ -44,7 +44,7 @@ const MoviesCards = ({ cards, biggerScreen, midScreen, smallScreen }) => {
 
     return (
         <div className="movies-cards__wrapper">
-            <div className="movies-cards__container">
+            <ul className="movies-cards__container">
                 {currentCards.map((card) => (
                     <MoviesCard
                         savedMovies={card.savedMovies}
@@ -55,7 +55,7 @@ const MoviesCards = ({ cards, biggerScreen, midScreen, smallScreen }) => {
                         id={card.id}
                     />
                 ))}
-            </div>
+            </ul>
             <button
                 className="movies-cards__btn-more"
                 type="button"

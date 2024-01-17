@@ -1,6 +1,6 @@
-import React from 'react';
-import image from '../../assets/images/about-me/avatar.jpeg';
-import './about-me.css';
+import React from "react";
+import image from "../../assets/images/about-me/avatar.jpeg";
+import "./about-me.css";
 
 const ContentText = () => {
   return (
@@ -12,12 +12,13 @@ const ContentText = () => {
           Я живу в двух городах: Ташкент (Узбекистан) и Калининград (Россия).
           Учусь в Калининграде, в БФУ им. Канта, на информационной безопасности.
           Мне нравится заниматься разработкой, помимо Web-разработки, учу C#.
-          Мне очень нравится...
+          Мне очень нравится изучать новые технологии и решать интересные задачи.
+          Я всегда открыт для новых знакомств и общения.
         </p>
       </div>
       <a
-        href='https://github.com/denis1527'
-        target='_blank'
+        href="https://github.com/denis1527"
+        target="_blank"
         className="content__link"
         rel="noreferrer"
       >
@@ -25,11 +26,11 @@ const ContentText = () => {
       </a>
     </section>
   );
-}
+};
 
 const AboutMe = () => {
   return (
-    <main className='about-me'>
+    <main className="about-me">
       <div className="about-me__wrapper">
         <div className="about-me__heading">
           <h3>Студент</h3>
@@ -44,6 +45,6 @@ const AboutMe = () => {
       </div>
     </main>
   );
-}
+};
 
 export default AboutMe;

@@ -12,12 +12,15 @@ const App = () => {
   return (
     <div className='app'>
       <Header />
-      <main className='app__main'>
+      <div className='app__main'>
         <Outlet />
-      </main>
-      {shouldShowFooter && <Footer />}
+      </div>
+      <div className={shouldShowFooter ? 'app__footer' : 'hidden'}>
+        <Footer />
+      </div>
     </div>
   );
 };
 
 export default App;
+

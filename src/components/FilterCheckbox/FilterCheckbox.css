@@ -1,10 +1,24 @@
-.filter-checkbox .slider {
+.slider {
+  position: relative;
+  display: inline-block;
   width: 36px;
   height: 20px;
+  background-color: var(--color-checkbox-dark);
+  border-radius: 10px;
+  transition: background-color 0.4s;
+  cursor: pointer;
 }
 
-.filter-checkbox .slider:before {
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  left: 8px;
+  bottom: 6px;
   background-color: var(--color-checkbox-gray);
+  border-radius: 50%;
+  transition: left 0.4s;
 }
 
 .filter-checkbox p {
@@ -13,33 +27,34 @@
   line-height: 18px;
 }
 
-.filter-checkbox input:checked + .slider {
+input:checked + .slider {
   background-color: var(--color-green);
 }
 
-.filter-checkbox .switch input {
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.filter-checkbox input:checked + .slider:before {
+input:checked + .slider:before {
   left: 22px;
   background-color: var(--color-text-light);
+
 }
 
 @media screen and (max-width: 768px) {
   .filter-checkbox {
-    margin-bottom: 46px;
+    margin-bottom: 46.40px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .filter-checkbox {
-    margin: 28px 0 60px;
+    margin: 28.80px 0 60.80px;
   }
 
-  .filter-checkbox .switch input {
+  .switch input {
     margin: 0;
     padding: 0;
   }

@@ -1,5 +1,5 @@
-import React from 'react';
-import './about-project.css';
+import React from "react";
+import "./about-project.css";
 
 const AboutProject = () => {
   return (
@@ -36,6 +36,6 @@ const AboutProject = () => {
       </div>
     </main>
   );
-}
+};
 
 export default AboutProject;
