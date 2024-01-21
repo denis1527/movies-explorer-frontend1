@@ -8,11 +8,12 @@
 }
 
 .profile__heading {
-    margin: calc(74px + 26px) auto 122px;
+    margin: calc(74px + 25px) auto 122px;
     color: var(--color-text-light);
     text-align: center;
     font-family: var(--font-family);
     font-size: 24px;
+    font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
@@ -23,27 +24,32 @@
     width: 410px;
 }
 
-.form__label {
+.form_label {
     color: var(--color-text-light);
     font-family: var(--font-family);
     font-size: 11px;
+    font-style: normal;
     font-weight: 500;
     line-height: normal;
     display: flex;
     justify-content: space-between;
+}
+
+.form_label:not(:last-child) {
     border-bottom: 1px solid var(--color-line);
     padding-bottom: 16px;
 }
 
-.form__label:not(:first-child) {
-    margin-top: 16.96px;
+.form_label:not(:first-child) {
+    margin-top: 16px;
 }
 
-.form__input {
+.form_input {
     color: var(--color-text-light);
     text-align: right;
     font-family: var(--font-family);
     font-size: 11px;
+    font-style: normal;
     font-weight: 400;
     line-height: normal;
     background: transparent;
@@ -52,17 +58,18 @@
     flex: 2;
 }
 
-.form__input:focus {
+.form_input:focus {
     padding-right: 8px;
     background-color: var(--color-dark);
     box-shadow: 0 1px 0 0 var(--color-green);
-    transition: padding 0.15s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    transition: padding .15s ease,box-shadow .3s ease,border-radius .3s ease;
 }
 
 .profile__btn {
     font-family: var(--font-family);
     text-align: center;
     font-size: 13px;
+    font-style: normal;
     font-weight: 500;
     line-height: normal;
     background: transparent;
@@ -83,6 +90,7 @@
 .profile__btn_type_exit {
     color: var(--color-red);
 }
+
 .scale-in-ver-top {
     -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -154,13 +162,11 @@
 
 @media screen and (max-width: 768px) {
     .profile__heading {
-        /*margin: calc(4.63rem + 11.6rem) auto 6.1rem;*/
-        margin: calc(74px + 186px) auto 98px;
+        margin: calc(74px + 185px) auto 97px;
     }
 
     .profile__btn_type_edit {
-        /*margin: 12rem 0 .9rem;*/
-        margin: 192px 0 15px;
+        margin: 192px 0 14px;
     }
 }
 
@@ -172,8 +178,7 @@
 
 @media screen and (max-width: 320px) {
     .profile__heading {
-        /*margin: calc(4.63rem + 1.3rem) auto 5rem;*/
-        margin: calc(74px + 21px) auto 80px;
+        margin: calc(74px + 20px) auto 80px;
     }
 
     .profile__form {
@@ -186,7 +191,6 @@
     }
 
     .profile__btn_type_edit {
-        /*margin: 22.6rem 0 1rem;*/
-        margin: 362px 0 16px;
+        margin: 361px 0 16px;
     }
 }

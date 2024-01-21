@@ -2,7 +2,7 @@ import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import './search-form.css'
 const SearchForm = () => {
   return (
-    <main className='search-form'>
+    <div className='search-form'>
       <div className="search-form__wrapper">
         <div className="search-form__container">
           <div className="search-form__input">
@@ -20,7 +20,7 @@ const SearchForm = () => {
           <FilterCheckbox />
         </div>
       </div>
-    </main>
+    </div>
   )
 }
 export default SearchForm

@@ -1,14 +1,8 @@
-import React from 'react';
+import React from 'react'
 import FormElement from "../FormElement/FormElement";
-import './register.css';
+import './register.css'
 
 const Register = () => {
-  return (
-      <main className="register">
-        <FormElement />
-      </main>
-  );
+  return <FormElement />
 }
-
-export default Register;
-
+export default Register

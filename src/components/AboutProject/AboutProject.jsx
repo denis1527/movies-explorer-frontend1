@@ -1,22 +1,26 @@
-import React from "react";
-import "./about-project.css";
-
+import './about-project.css'
 const AboutProject = () => {
   return (
-    <main id='about-project' className='about-project'>
+    <section id='about-project' className='about-project'>
       <div className="about-project__wrapper">
-        <h2 className="about-project__about">О проекте</h2>
+        <h3 className="about-project__about">
+          О проекте
+        </h3>
 
         <div className="about-project__content content">
           <div className="content__column">
-            <h3 className="content__heading">Дипломный проект включал 5 этапов</h3>
-            <p className="content__text">
-              Составление плана, работа над бэкендом, вёрстку, добавление функциональности и финальные доработки.
+            <h4 className="content_heading">
+              Дипломный проект включал 5 этапов
+            </h4>
+            <p className="content_text">
+              Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.
             </p>
           </div>
           <div className="content__column">
-            <h3 className="content__heading">На выполнение диплома ушло 5 недель</h3>
-            <p className="content__text">
+            <h4 className="content_heading">
+              На выполнение диплома ушло 5 недель
+            </h4>
+            <p className="content_text">
               У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
             </p>
           </div>
@@ -34,8 +38,7 @@ const AboutProject = () => {
           </div>
         </div>
       </div>
-    </main>
-  );
-};
-
-export default AboutProject;
+    </section>
+  )
+}
+export default AboutProject

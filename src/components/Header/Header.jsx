@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from '../../assets/images/header/logo.svg';
-import Navigation from '../Navigation/Navigation';
-import './header.css';
+import React, { useState } from 'react'
+import logo from '../../assets/images/header/logo.svg'
+import Navigation from "../../components/Navigation/Navigation";
+import './header.css'
 
 const Header = () => {
   return (
@@ -13,8 +13,6 @@ const Header = () => {
         <Navigation />
       </div>
     </header>
-  );
-};
-
-export default Header;
-
+  )
+}
+export default Header

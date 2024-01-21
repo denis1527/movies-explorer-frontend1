@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './FilterCheckbox.css'
+
+import './filter-checkbox.css'
 
 const FilterCheckbox = () => {
   const [isOn, setIsOn] = useState(false);
@@ -10,14 +11,13 @@ const FilterCheckbox = () => {
 
   return (
 
-    <div className="filter-checkbox search-form__switch">
-      <label className='switch'>
-        <input type="checkbox" checked={isOn} onChange={handleToggle} />
-        <span className="slider"></span>
-      </label>
-      <p>Короткометражки</p>
-    </div>
+  <div className="filter-checkbox search-form__switch">
+    <label className='switch'>
+      <input type="checkbox" checked={isOn} onChange={handleToggle} />
+      <span className="slider"></span>
+    </label>
+    <p>Короткометражки</p>
+  </div>
   )
 }
 export default FilterCheckbox
-

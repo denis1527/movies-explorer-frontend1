@@ -1,15 +1,15 @@
-import React from 'react';
-import './form-button.css';
-
+import React from 'react'
+import './form-button.css'
 const FormButton = ({ text, onClick, margin, smallScreenMargin, animation }) => {
-  const buttonStyle = {
-    marginTop: margin,
-  };
 
-  if (window.innerWidth <= 320 && smallScreenMargin) {
-    buttonStyle.marginTop = smallScreenMargin;
+  const buttonStyle = {
+    marginTop: margin
+  }
+
+  if (window.innerWidth <= 320 && smallScreenMargin)  {
+    buttonStyle.marginTop = smallScreenMargin
   } else {
-    buttonStyle.marginTop = margin;
+    buttonStyle.marginTop = margin
   }
 
   return (
@@ -21,7 +21,6 @@ const FormButton = ({ text, onClick, margin, smallScreenMargin, animation }) => 
     >
       {text}
     </button>
-  );
-};
-
-export default FormButton;
+  )
+}
+export default FormButton

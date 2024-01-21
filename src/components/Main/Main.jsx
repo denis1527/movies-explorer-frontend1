@@ -1,11 +1,10 @@
-import React from 'react';
-import Promo from '../Promo/Promo';
-import Techs from '../Techs/Techs';
-import AboutMe from '../AboutMe/AboutMe';
-import Portfolio from '../Portfolio/Portfolio';
-import AboutProject from '../AboutProject/AboutProject';
+import Promo from "../Promo/Promo";
+import Techs from "..//Techs/Techs";
+import AboutMe from "../AboutMe/AboutMe";
+import Portfolio from "../Portfolio/Portfolio";
+import AboutProject from "../AboutProject/AboutProject";
 
-import './main.css';
+// import './main.css'
 
 const Main = () => {
   return (
@@ -16,8 +15,6 @@ const Main = () => {
       <AboutMe />
       <Portfolio />
     </main>
-  );
-};
-
-export default Main;
-
+  )
+}
+export default Main
