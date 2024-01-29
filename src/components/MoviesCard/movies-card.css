@@ -19,7 +19,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 18px;
+    /*padding: 1.12rem 1.13rem;*/
+    padding: 17.92px 18.08px;
 }
 
 .card__title {
@@ -27,10 +28,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
+
     max-width: 240px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 .card__time {
@@ -48,9 +50,11 @@
 }
 
 .button {
-    margin: 17px 129px;
+    /*margin: 1.12rem 8.12rem;*/
+    margin: 17.92px 129.92px;
     color: var(--color-text-light);
-    padding: 8px 15px;
+    /*padding: 0.56rem 0.94rem;*/
+    padding: 8.94px 15.04px;
     text-align: center;
     font-size: 12px;
     font-style: normal;
@@ -156,7 +160,8 @@
     }
 
     .button {
-        margin: 17px 120px;
+        /*margin: 1.12rem 7.56rem;*/
+        margin: 17.92px 120.96px;
     }
 }
 
@@ -166,7 +171,8 @@
     }
 
     .card__heading {
-        padding: 17px 15px 17px 15px;
+        /*padding: 1.1rem 1.2rem 1.1rem .6rem;*/
+        padding: 17.60px 15px 17.60px 15px;
     }
 
     .card__title {
@@ -190,7 +196,9 @@
     }
 
     .button {
-        margin: 11px 100px;
-        padding: 9px 3px;
+        /*margin: .7rem 6.26rem;*/
+        margin: 11.20px 100.16px;
+        /*padding: 0.58rem .2rem;*/
+        padding: 9.28px 3.20px;
     }
 }
