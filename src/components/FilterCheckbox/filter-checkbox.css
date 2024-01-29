@@ -40,7 +40,6 @@ input:checked + .slider {
 input:checked + .slider:before {
     left: 22px;
     background-color: var(--color-text-light);
-
 }
 
 @media screen and (max-width: 768px) {

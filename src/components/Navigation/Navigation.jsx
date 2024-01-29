@@ -6,9 +6,8 @@ import iconMenu from '../../assets/icons/navbar/burger.svg'
 import {useLocation} from "react-router-dom";
 import './navigation.css'
 
-const Navigation = () => {
+const Navigation = ({ isLoggedIn }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
-  const [isLoggedIn, setIsLoggedIn] = useState(true)
 
   const location = useLocation()
   const pathname = location.pathname
