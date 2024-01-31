@@ -139,10 +139,10 @@ const App = () => {
         <main className='main'>
           <Routes>
             <Route path="/" index={true} element={<Main />} />
-            <Route path="/signup" element={
+            <Route path="/sign-up" element={
               <ProtectedRoute isLoggedIn={!isLoggedIn} element={Register} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
             } />
-            <Route path="/signin" element={
+            <Route path="/sign-in" element={
               <ProtectedRoute isLoggedIn={!isLoggedIn} element={Login} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
             } />
             <Route path="/movies" element={

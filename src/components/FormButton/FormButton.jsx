@@ -35,8 +35,8 @@ const FormButton = ({
       style={buttonStyle}
     >
       {
-        isEntering && pathname === '/signup' ? textOnSigningUp :
-        isEntering && pathname === '/signin' ? textOnSigninIn :
+        isEntering && pathname === '/sign-up' ? textOnSigningUp :
+        isEntering && pathname === '/sign-in' ? textOnSigninIn :
         text
       }
     </button>

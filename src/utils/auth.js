@@ -11,7 +11,7 @@ const checkResponse = async (res) => {
 // Registration
 export const register = async (name, email, password) => {
   try {
-    const response = await fetch(`${BASE_URL}/signup`, {
+    const response = await fetch(`${BASE_URL}/sign-up`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -31,7 +31,7 @@ export const register = async (name, email, password) => {
 // Login
 export const authorize = async (email, password) => {
   try {
-    const response = await fetch(`${BASE_URL}/signin`, {
+    const response = await fetch(`${BASE_URL}/sign-in`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -51,7 +51,7 @@ export const authorize = async (email, password) => {
 // Logout
 export const logout = async () => {
   try {
-    const response = await fetch(`${BASE_URL}/signout`, {
+    const response = await fetch(`${BASE_URL}/sign-out`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',

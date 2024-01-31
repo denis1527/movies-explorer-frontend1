@@ -27,9 +27,9 @@ const Login = ({ handleOnLogin, setCurrentUser }) => {
   // Props for the FormElement global component:
   const greetingMessage = 'Рады видеть!'
   const textButton = 'Войти'
-  const textOnSigninIn = 'Входим в систему...'
+  const textOnSigningIn = 'Входим в систему...'
   const textParagraph = 'Ещё не зарегистрированы?'
-  const link = '/signup'
+  const link = '/sign-up'
   const textSpan = 'Регистрация'
 
   // React hook - to set submit button disabled depending on the validity of fields in the form:
@@ -82,7 +82,7 @@ const Login = ({ handleOnLogin, setCurrentUser }) => {
       submitHandler={submitHandler}
       isSubmitDisabled={isSubmitDisabled}
       isEntering={isEntering}
-      textOnSigninIn={textOnSigninIn}
+      textOnSigninIn={textOnSigningIn}
     >
       <Input
         value={values.email || ""}
