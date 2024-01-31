@@ -3,14 +3,14 @@ import {useEffect, useState} from "react";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
-import Register from "../Register/Register";
+import Register from "../../components/Register/Register";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import NotFound from "../NotFound/NotFound";
-import Login from "../Login/Login";
+import Login from "../../components/Login/Login";
 import Movies from "../Movies/Movies";
-import Profile from "../Profile/Profile";
+import Profile from "../../components/Profile/Profile";
 import Footer from "../Footer/Footer";
-import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import * as auth from '../../utils/auth'
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 import {CurrentUserContext} from "../../contexts/CurrentUserContext";
@@ -18,6 +18,7 @@ import * as MainAPI from '../../utils/MainApi'
 import {handleGetFromLocalStorage, handleSaveToLocalStorage} from "../../utils/utils";
 import {SERVER_URL} from "../../utils/constants";
 
+// Styles
 import './app.css'
 
 const App = () => {
@@ -139,10 +140,10 @@ const App = () => {
         <main className='main'>
           <Routes>
             <Route path="/" index={true} element={<Main />} />
-            <Route path="/sign-up" element={
+            <Route path="/signup" element={
               <ProtectedRoute isLoggedIn={!isLoggedIn} element={Register} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
             } />
-            <Route path="/sign-in" element={
+            <Route path="/signin" element={
               <ProtectedRoute isLoggedIn={!isLoggedIn} element={Login} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
             } />
             <Route path="/movies" element={

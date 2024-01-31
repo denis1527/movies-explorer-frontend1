@@ -6,9 +6,9 @@ const Entry = () => {
     <div className="entry__container scale-up-center">
       <div className="entry__container_links-sign">
         <p>
-          <NavLink to='/sign-up'>Регистрация</NavLink>
+          <NavLink to='/signup'>Регистрация</NavLink>
         </p>
-        <NavLink to='/sign-in'>
+        <NavLink to='/signin'>
           <button type='button'>Войти</button>
         </NavLink>
       </div>

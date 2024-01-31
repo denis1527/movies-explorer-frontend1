@@ -1,4 +1,5 @@
 import React from 'react'
+// Styles
 import './not-found.css'
 
 const NotFound = ({ handleGoBack }) => {

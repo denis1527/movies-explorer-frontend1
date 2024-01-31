@@ -30,13 +30,14 @@ const FormButton = ({
     <button
       disabled={isSubmitDisabled}
       type={type}
+      // className={`form-btn ${animation}`}
       className='form-btn'
       onClick={onClick}
       style={buttonStyle}
     >
       {
-        isEntering && pathname === '/sign-up' ? textOnSigningUp :
-        isEntering && pathname === '/sign-in' ? textOnSigninIn :
+        isEntering && pathname === '/signup' ? textOnSigningUp :
+        isEntering && pathname === '/signin' ? textOnSigninIn :
         text
       }
     </button>

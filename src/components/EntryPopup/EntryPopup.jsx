@@ -3,6 +3,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {GrClose} from "react-icons/gr";
 import {AiOutlineCheck} from "react-icons/ai";
 
+// Styles
 import './entry-popup.css'
 
 const EntryPopup = ({ onSuccess, isOpen, message, setIsOpen, textOnError }) => {

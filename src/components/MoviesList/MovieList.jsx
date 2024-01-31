@@ -1,7 +1,7 @@
 import {useLocation} from "react-router-dom";
 import {useCallback} from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
-import MoviesNotFound from "../MoviesNotFound/MoviesNotFound";
+import MoviesNotFound from "../../containers/Movies/MoviesNotFound/MoviesNotFound";
 import {
   CARDS_TO_ADD_1280,
   CARDS_TO_ADD_320,

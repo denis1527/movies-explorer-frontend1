@@ -8,6 +8,7 @@
 .menu_list {
     display: flex;
     flex-direction: row;
+    /*gap: 1.25rem;*/
     gap: 20px;
 }
 
@@ -23,15 +24,18 @@
 }
 
 .menu_link:hover {
+    /*text-decoration: underline;*/
     opacity: var(--opacity-link);
 }
 
 .menu_account {
     display: flex;
     flex-direction: row;
-    margin-left: 49px;
+    /*margin-left: 3.12rem;*/
+    margin-left: 49.92px;
     align-items: center;
-    gap: 12px;
+    /*gap: 0.81rem;*/
+    gap: 12.96px;
     cursor: pointer;
 }
 
@@ -45,6 +49,7 @@
 }
 
 .menu_account p:hover {
+    /*text-decoration: underline;*/
     opacity: var(--opacity-link);
 }
 

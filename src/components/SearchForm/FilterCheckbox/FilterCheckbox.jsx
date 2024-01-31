@@ -1,5 +1,5 @@
 import React from 'react'
-
+// Styles
 import './filter-checkbox.css'
 
 const FilterCheckbox = ({ onCheckbox, shortMovies, setShortMovies }) => {

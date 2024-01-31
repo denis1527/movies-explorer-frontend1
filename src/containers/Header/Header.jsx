@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../../assets/images/header/logo.svg'
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../../components/Navigation/Navigation";
 import './header.css'
 
 const Header = ({ isLoggedIn }) => {

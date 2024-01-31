@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
-import SearchForm from "../SearchForm/SearchForm";
-import MovieList from "../MoviesList/MovieList";
-import Preloader from "..//Preloader/Preloader";
+import SearchForm from "../../components/SearchForm/SearchForm";
+import MovieList from "../../components/MoviesList/MovieList";
+import Preloader from "../../components/Preloader/Preloader";
 import {
   filteredMoviesFromSearch,
   filterShortMovies,
@@ -10,6 +10,7 @@ import {
 } from "../../utils/utils";
 import {getSavedMovies} from "../../utils/MainApi";
 
+// Styles
 import './saved-movies.css'
 
 const SavedMovies = ({ savedMovies, setSavedMovies, removeMovie }) => {

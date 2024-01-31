@@ -9,6 +9,7 @@ import './navigation.css'
 const Navigation = ({ isLoggedIn }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
+
   const location = useLocation()
   const pathname = location.pathname
 

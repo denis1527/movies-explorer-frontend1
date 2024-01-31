@@ -1,4 +1,5 @@
-import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
+import FilterCheckbox from "./FilterCheckbox/FilterCheckbox";
+// Styles
 import './search-form.css'
 
 const SearchForm = ({ searchInputRef, handleSearch, showMessage, onCheckbox, shortMovies, setShortMovies }) => {

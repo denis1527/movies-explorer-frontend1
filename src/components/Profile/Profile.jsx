@@ -35,6 +35,12 @@ const Profile = ({ handleOnLogout, setCurrentUser }) => {
       'email': email
     })
 
+    // if (Object.keys(currentUser).length !== 0) {
+    //   setValues({ ...values,
+    //     'name': name,
+    //     'email': email
+    //   })
+    // }
   }, [currentUser]);
 
   useEffect(() => {

@@ -30,7 +30,7 @@ const Register = ({ handleOnLogin, setCurrentUser }) => {
   const textButton = 'Зарегистрироваться'
   const textOnSigningUp = 'Регистрация...'
   const textParagraph = 'Уже зарегистрированы?'
-  const link = '/sign-in'
+  const link = '/signin'
   const textSpan = 'Войти'
 
   // React hook - to set submit button disabled depending on the validity of fields in the form:

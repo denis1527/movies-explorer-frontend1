@@ -30,13 +30,13 @@ const SERVER_ERROR="На сервере произошла ошибка."
 // Handler to show a correct error message
 export function handleMessageErrors(error, pathname) {
   // Login:
-  if (error === "Error: 400" && pathname === '/sign-in') return TOKEN_ERROR
-  if (error === "Error: 401" && pathname === '/sign-in') return EMAIL_OR_PASSWORD_ERROR
-  if (error === "Error: 409" && pathname === '/sign-in') return CONFLICT_ERROR
+  if (error === "Error: 400" && pathname === '/signin') return TOKEN_ERROR
+  if (error === "Error: 401" && pathname === '/signin') return EMAIL_OR_PASSWORD_ERROR
+  if (error === "Error: 409" && pathname === '/signin') return CONFLICT_ERROR
 
   // Register:
-  if (error === "Error: 409" && pathname === '/sign-up') return CONFLICT_ERROR
-  if (error === "Error: 400" && pathname === '/sign-up') return REGISTER_ERROR
+  if (error === "Error: 409" && pathname === '/signup') return CONFLICT_ERROR
+  if (error === "Error: 400" && pathname === '/signup') return REGISTER_ERROR
 
   // Profile:
   if (error === "Error: 400" && pathname === '/profile') return EDIT_PROFILE_ERROR
