@@ -12,17 +12,18 @@ import {
 
 // Styles
 import './movie-list.css'
+
 const MovieList = ({
-  screenWidth,
-  searchMessageError,
-  onGoBackClick,
-  error,
-  setMoviesToShow,
-  movies,
-  endIndex,
-  likeMovie,
-  removeMovie,
-}) => {
+                     screenWidth,
+                     searchMessageError,
+                     onGoBackClick,
+                     error,
+                     setMoviesToShow,
+                     movies,
+                     endIndex,
+                     likeMovie,
+                     removeMovie,
+                   }) => {
   const pathname = useLocation().pathname
 
   const handleOnShowMoreClick = useCallback(() => {
@@ -40,28 +41,28 @@ const MovieList = ({
 
   return (
     <div className="movies-cards__wrapper">
-    {searchMessageError ? (
-      <MoviesNotFound onGoBackClick={onGoBackClick} error={error} />
+      {searchMessageError ? (
+        <MoviesNotFound onGoBackClick={onGoBackClick} error={error}/>
       ) : (
-      <div className="movies-cards__container">
-        {movies.slice(0, endIndex).map((movie, _index) => (
-          <MoviesCard
-            key={movie.id || _index}
-            movie={movie}
-            likeMovie={likeMovie}
-            removeMovie={removeMovie}
-          />
-        ))}
-      </div>
-        )}
+        <div className="movies-cards__container">
+          {movies.slice(0, endIndex).map((movie, _index) => (
+            <MoviesCard
+              key={movie.id || _index}
+              movie={movie}
+              likeMovie={likeMovie}
+              removeMovie={removeMovie}
+            />
+          ))}
+        </div>
+      )}
       {pathname === '/movies' &&
         <button
-        className="movies-cards__btn-more"
-        type='button'
-        onClick={handleOnShowMoreClick}
-        style={{visibility: movies.length !== 0 && endIndex < movies.length ? 'visible' : 'hidden'}}
-      >Ещё
-      </button>
+          className="movies-cards__btn-more"
+          type='button'
+          onClick={handleOnShowMoreClick}
+          style={{visibility: movies.length !== 0 && endIndex < movies.length ? 'visible' : 'hidden'}}
+        >Ещё
+        </button>
       }
     </div>
   )

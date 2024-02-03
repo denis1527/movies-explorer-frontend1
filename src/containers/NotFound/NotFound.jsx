@@ -2,7 +2,7 @@ import React from 'react'
 // Styles
 import './not-found.css'
 
-const NotFound = ({ handleGoBack }) => {
+const NotFound = ({handleGoBack}) => {
   return (
     <section className='not-found'>
       <h1 className="not-found__heading">404</h1>

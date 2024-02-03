@@ -10,10 +10,10 @@ const useFormWithValidation = () => {
   const handleOnChange = (event) => {
     const target = event.target
 
-    const { name, value } = target
+    const {name, value} = target
 
-    setValues({ ...values, [name]: value })
-    setErrors({ ...errors, [name]: target.validationMessage })
+    setValues({...values, [name]: value})
+    setErrors({...errors, [name]: target.validationMessage})
     setIsValid(target.closest('form').checkValidity())
   }
 
@@ -25,7 +25,7 @@ const useFormWithValidation = () => {
     }, [setValues, setErrors, setIsValid]
   )
 
-  return { values, errors, setErrors, isValid, handleOnChange, setValues, setIsValid, resetForm}
+  return {values, errors, setErrors, isValid, handleOnChange, setValues, setIsValid, resetForm}
 }
 
 export default useFormWithValidation;

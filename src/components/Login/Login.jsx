@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useLocation} from "react-router-dom";
 import * as auth from '../../utils/auth'
 import FormElement from "../FormElement/FormElement";
@@ -13,11 +13,12 @@ import {
 
 // Styles
 import './login.css'
-const Login = ({ handleOnLogin, setCurrentUser }) => {
+
+const Login = ({handleOnLogin, setCurrentUser}) => {
   const location = useLocation()
   const pathname = location.pathname
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true)
-  const { values, resetForm, handleOnChange, errors, isValid } = useFormWithValidation()
+  const {values, resetForm, handleOnChange, errors, isValid} = useFormWithValidation()
   const [isEntering, setIsEntering] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -42,7 +43,7 @@ const Login = ({ handleOnLogin, setCurrentUser }) => {
     e.preventDefault()
     setIsSubmitDisabled(true)
 
-    const { email, password } = values
+    const {email, password} = values
 
     if (!email || !password) {
       // setIsSubmitDisabled(true)
@@ -58,7 +59,7 @@ const Login = ({ handleOnLogin, setCurrentUser }) => {
         setIsSuccess(true)
         handleOnLogin()
         resetForm()
-        setCurrentUser({ name: data.name, email: data.email})
+        setCurrentUser({name: data.name, email: data.email})
       } catch (err) {
         setTextOnError(() => handleMessageErrors(err.message, pathname))
         console.error(`Error: ${err.message}`)

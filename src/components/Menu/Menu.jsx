@@ -3,7 +3,7 @@ import accountIcon from "../../assets/icons/navbar/account-icon-1.svg";
 
 import './menu.css'
 
-const Menu = ({ pathname, toggleMenu }) => {
+const Menu = ({pathname, toggleMenu}) => {
   return (
     <>
       <section className="menu">

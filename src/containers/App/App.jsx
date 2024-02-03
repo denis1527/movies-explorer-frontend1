@@ -23,14 +23,14 @@ import './app.css'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [currentUser, setCurrentUser] = useState({ name: '', email: '' })
+  const [currentUser, setCurrentUser] = useState({name: '', email: ''})
   const [savedMovies, setSavedMovies] = useState([])
   // Check box short movies on/off:
   const navigate = useNavigate()
   const location = useLocation()
   const pathname = location.pathname
 
-  const { resetForm } = useFormWithValidation()
+  const {resetForm} = useFormWithValidation()
 
 
   // State to authenticate user's token:
@@ -52,8 +52,8 @@ const App = () => {
 
         setCurrentUser((prevState) => ({
           ...prevState,
-            name: data.name,
-            email: data.email
+          name: data.name,
+          email: data.email
         }))
       }
 
@@ -65,16 +65,16 @@ const App = () => {
 
   const handleOnLogin = () => {
     setIsLoggedIn(true)
-    navigate('/movies', { replace: true })
+    navigate('/movies', {replace: true})
   }
 
   const handleOnLogout = async () => {
     try {
       await auth.logout()
       setIsLoggedIn(false)
-      navigate('/', { replace: true })
+      navigate('/', {replace: true})
       resetForm()
-      setCurrentUser({ name: "", email: ""})
+      setCurrentUser({name: "", email: ""})
       localStorage.clear()
     } catch (error) {
       console.error(`Error: ${error.message}`)
@@ -136,16 +136,19 @@ const App = () => {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='App'>
-        {(pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile') && <Header isLoggedIn={isLoggedIn} />}
+        {(pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile') &&
+          <Header isLoggedIn={isLoggedIn}/>}
         <main className='main'>
           <Routes>
-            <Route path="/" index={true} element={<Main />} />
+            <Route path="/" index={true} element={<Main/>}/>
             <Route path="/signup" element={
-              <ProtectedRoute isLoggedIn={!isLoggedIn} element={Register} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
-            } />
+              <ProtectedRoute isLoggedIn={!isLoggedIn} element={Register} handleOnLogin={handleOnLogin}
+                              setCurrentUser={setCurrentUser}/>
+            }/>
             <Route path="/signin" element={
-              <ProtectedRoute isLoggedIn={!isLoggedIn} element={Login} handleOnLogin={handleOnLogin} setCurrentUser={setCurrentUser} />
-            } />
+              <ProtectedRoute isLoggedIn={!isLoggedIn} element={Login} handleOnLogin={handleOnLogin}
+                              setCurrentUser={setCurrentUser}/>
+            }/>
             <Route path="/movies" element={
               <ProtectedRoute
                 isLoggedIn={isLoggedIn}
@@ -166,14 +169,15 @@ const App = () => {
             }
             />
             <Route path="/profile" element={
-              <ProtectedRoute setCurrentUser={setCurrentUser} isLoggedIn={isLoggedIn} handleOnLogout={handleOnLogout} element={Profile} />
+              <ProtectedRoute setCurrentUser={setCurrentUser} isLoggedIn={isLoggedIn} handleOnLogout={handleOnLogout}
+                              element={Profile}/>
             }
             />
-            <Route path="*" element={<NotFound handleGoBack={handleGoBack} />} />
+            <Route path="*" element={<NotFound handleGoBack={handleGoBack}/>}/>
           </Routes>
         </main>
 
-        {(pathname === '/' || pathname === '/movies' || pathname === '/saved-movies') &&  <Footer />}
+        {(pathname === '/' || pathname === '/movies' || pathname === '/saved-movies') && <Footer/>}
       </div>
     </CurrentUserContext.Provider>
   )

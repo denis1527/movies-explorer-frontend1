@@ -6,7 +6,7 @@ import {AiOutlineCheck} from "react-icons/ai";
 // Styles
 import './entry-popup.css'
 
-const EntryPopup = ({ onSuccess, isOpen, message, setIsOpen, textOnError }) => {
+const EntryPopup = ({onSuccess, isOpen, message, setIsOpen, textOnError}) => {
 
   // Handler function to close modal:
   const handleOnClose = () => {
@@ -20,7 +20,7 @@ const EntryPopup = ({ onSuccess, isOpen, message, setIsOpen, textOnError }) => {
           'entry-popup__sign entry-popup__sign_color_green' :
           'entry-popup__sign entry-popup__sign_color_red'}
         >
-          {onSuccess ? <AiOutlineCheck style={{color: 'white'}} /> : <GrClose style={{color: 'white'}} />}
+          {onSuccess ? <AiOutlineCheck style={{color: 'white'}}/> : <GrClose style={{color: 'white'}}/>}
         </div>
         <h2 className={onSuccess ?
           'entry-popup__heading entry-popup__heading_color_green' :
@@ -35,8 +35,8 @@ const EntryPopup = ({ onSuccess, isOpen, message, setIsOpen, textOnError }) => {
           onClick={handleOnClose}
           type='button'
           className={onSuccess ?
-          "entry-popup__button entry-popup__button_color_green" :
-          "entry-popup__button entry-popup__button_color_red"}
+            "entry-popup__button entry-popup__button_color_green" :
+            "entry-popup__button entry-popup__button_color_red"}
         >
           {onSuccess ? 'Ок' : 'Попробуйте ещё раз'}
         </button>

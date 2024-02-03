@@ -9,11 +9,11 @@ import AboutProject from "../../components/AboutProject/AboutProject";
 const Main = () => {
   return (
     <>
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <Promo/>
+      <AboutProject/>
+      <Techs/>
+      <AboutMe/>
+      <Portfolio/>
     </>
   )
 }

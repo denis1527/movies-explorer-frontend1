@@ -14,8 +14,8 @@ import EntryPopup from "../EntryPopup/EntryPopup";
 import './profile.css'
 import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 
-const Profile = ({ handleOnLogout, setCurrentUser }) => {
-  const { values, handleOnChange, setValues, errors, resetForm } = useFormWithValidation()
+const Profile = ({handleOnLogout, setCurrentUser}) => {
+  const {values, handleOnChange, setValues, errors, resetForm} = useFormWithValidation()
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false)
   const location = useLocation()
   const pathname = location.pathname
@@ -27,10 +27,11 @@ const Profile = ({ handleOnLogout, setCurrentUser }) => {
   const [isEntering, setIsEntering] = useState(false)
 
   const currentUser = useContext(CurrentUserContext)
-  const { name, email } = currentUser
+  const {name, email} = currentUser
 
   useEffect(() => {
-    setValues({ ...values,
+    setValues({
+      ...values,
       'name': name,
       'email': email
     })
@@ -51,8 +52,7 @@ const Profile = ({ handleOnLogout, setCurrentUser }) => {
     ) {
       setBtnDisabled(false)
       setIsSubmitDisabled(false)
-    }
-    else {
+    } else {
       setIsSubmitDisabled(true)
       setBtnDisabled(true)
     }
@@ -79,8 +79,7 @@ const Profile = ({ handleOnLogout, setCurrentUser }) => {
       setIsSuccess(false)
       setIsSubmitDisabled(true)
       console.error(`Error: ${err.message}`)
-    }
-    finally {
+    } finally {
       setBtnDisabled(true)
       setIsEntering(false)
     }
@@ -141,7 +140,8 @@ const Profile = ({ handleOnLogout, setCurrentUser }) => {
               className="profile__btn profile__btn_type_edit"
               onClick={handleEditProfile}
               disabled={btnDisabled}
-            >Редактировать</button>
+            >Редактировать
+            </button>
             <button
               type='button'
               className="profile__btn profile__btn_type_exit"

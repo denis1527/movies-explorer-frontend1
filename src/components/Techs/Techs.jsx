@@ -1,4 +1,5 @@
 import './techs.css'
+
 const Techs = () => {
   return (
     <section className='techs'>

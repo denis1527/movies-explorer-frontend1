@@ -4,18 +4,18 @@ import {NavLink} from "react-router-dom";
 import './form-element.css'
 
 const FormElement = ({
-   children,
-   submitHandler,
-   greetingMessage,
-   textBtn,
-   paragraph,
-   link,
-   span,
-   isSubmitDisabled,
-   isEntering,
-   textOnSigningUp,
-   textOnSigninIn
-}) => {
+                       children,
+                       submitHandler,
+                       greetingMessage,
+                       textBtn,
+                       paragraph,
+                       link,
+                       span,
+                       isSubmitDisabled,
+                       isEntering,
+                       textOnSigningUp,
+                       textOnSigninIn
+                     }) => {
   return (
     <section className='form-element'>
       <div className="form-element__wrapper">

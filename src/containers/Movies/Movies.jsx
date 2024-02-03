@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import MovieList from "../../components/MoviesList/MovieList";
-import { getMoviesData } from "../../utils/MoviesApi";
+import {getMoviesData} from "../../utils/MoviesApi";
 import Preloader from "../../components/Preloader/Preloader";
 import {
   filteredMoviesFromSearch,
@@ -15,7 +15,7 @@ import useResponsiveCardsShowing from "../../hooks/useResponsiveCardsShowing";
 import './movies.css';
 import {INITIAL_NUMBER_OF_CARDS_1280} from "../../utils/constants";
 
-const Movies = ({ likeMovie, removeMovie }) => {
+const Movies = ({likeMovie, removeMovie}) => {
   const searchInputRef = useRef(null);
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
@@ -55,7 +55,7 @@ const Movies = ({ likeMovie, removeMovie }) => {
         setSearchMessageError('Ничего не найдено');
       } else {
         setFilteredMovies(resultFilteredMovieList);
-        handleSaveToLocalStorage('searchFiltered', { resultFilteredMovieList, searchTerm, shortMovies });
+        handleSaveToLocalStorage('searchFiltered', {resultFilteredMovieList, searchTerm, shortMovies});
       }
     } catch (error) {
       setError(true);
@@ -68,24 +68,24 @@ const Movies = ({ likeMovie, removeMovie }) => {
   // Обновите логику пагинации и отображения короткометражек здесь
 
   return (
-      <section className='movies'>
-        <SearchForm
-            searchInputRef={searchInputRef}
-            handleSearch={handleSearch}
-            showMessage={showMessage}
-            onCheckbox={setShortMovies}
-            shortMovies={shortMovies}
+    <section className='movies'>
+      <SearchForm
+        searchInputRef={searchInputRef}
+        handleSearch={handleSearch}
+        showMessage={showMessage}
+        onCheckbox={setShortMovies}
+        shortMovies={shortMovies}
+      />
+      {preloader ? <Preloader/> : (
+        <MovieList
+          movies={filteredMovies}
+          likeMovie={likeMovie}
+          removeMovie={removeMovie}
+          searchMessageError={searchMessageError}
+          showMessage={showMessage}
         />
-        {preloader ? <Preloader/> : (
-            <MovieList
-                movies={filteredMovies}
-                likeMovie={likeMovie}
-                removeMovie={removeMovie}
-                searchMessageError={searchMessageError}
-                showMessage={showMessage}
-            />
-        )}
-      </section>
+      )}
+    </section>
   );
 };
 

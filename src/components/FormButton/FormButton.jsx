@@ -1,18 +1,19 @@
 import React from 'react'
 import './form-button.css'
 import {useLocation} from "react-router-dom";
+
 const FormButton = ({
-  text,
-  onClick,
-  margin,
-  smallScreenMargin,
-  animation,
-  type,
-  isSubmitDisabled,
-  textOnSigningUp,
-  textOnSigninIn,
-  isEntering
-}) => {
+                      text,
+                      onClick,
+                      margin,
+                      smallScreenMargin,
+                      animation,
+                      type,
+                      isSubmitDisabled,
+                      textOnSigningUp,
+                      textOnSigninIn,
+                      isEntering
+                    }) => {
   const location = useLocation()
   const pathname = location.pathname
 
@@ -20,7 +21,7 @@ const FormButton = ({
     marginTop: margin
   }
 
-  if (window.innerWidth <= 320 && smallScreenMargin)  {
+  if (window.innerWidth <= 320 && smallScreenMargin) {
     buttonStyle.marginTop = smallScreenMargin
   } else {
     buttonStyle.marginTop = margin
@@ -37,8 +38,8 @@ const FormButton = ({
     >
       {
         isEntering && pathname === '/signup' ? textOnSigningUp :
-        isEntering && pathname === '/signin' ? textOnSigninIn :
-        text
+          isEntering && pathname === '/signin' ? textOnSigninIn :
+            text
       }
     </button>
   )

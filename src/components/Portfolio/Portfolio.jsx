@@ -1,6 +1,7 @@
 import Projects from '../Projects/Projects'
 
 import './portfolio.css'
+
 const Portfolio = () => {
   return (
     <section className='portfolio'>
@@ -10,7 +11,7 @@ const Portfolio = () => {
         </h4>
 
         <div className="portfolio__projects">
-          <Projects />
+          <Projects/>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import './about-project.css'
+
 const AboutProject = () => {
   return (
     <section id='about-project' className='about-project'>

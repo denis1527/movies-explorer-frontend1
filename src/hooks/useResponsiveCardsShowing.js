@@ -1,4 +1,5 @@
 import {useCallback, useEffect, useState} from "react";
+
 const useResponsiveCardsShowing = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 

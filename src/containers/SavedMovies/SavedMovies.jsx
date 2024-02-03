@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import SearchForm from "../../components/SearchForm/SearchForm";
 import MovieList from "../../components/MoviesList/MovieList";
 import Preloader from "../../components/Preloader/Preloader";
@@ -10,7 +10,7 @@ import {
 // Styles
 import './saved-movies.css';
 
-const SavedMovies = ({ savedMovies, setSavedMovies, removeMovie }) => {
+const SavedMovies = ({savedMovies, setSavedMovies, removeMovie}) => {
   const searchInputRef = useRef(null);
   const [preloader, setPreloader] = useState(false);
   const [searchMessageError, setSearchMessageError] = useState(null);
@@ -45,23 +45,23 @@ const SavedMovies = ({ savedMovies, setSavedMovies, removeMovie }) => {
   // Обновите логику отображения короткометражек здесь
 
   return (
-      <section className='saved-movies'>
-        <SearchForm
-            searchInputRef={searchInputRef}
-            handleSearch={handleSearch}
-            showMessage={showMessage}
-            onCheckbox={setShortMovies}
-            shortMovies={shortMovies}
+    <section className='saved-movies'>
+      <SearchForm
+        searchInputRef={searchInputRef}
+        handleSearch={handleSearch}
+        showMessage={showMessage}
+        onCheckbox={setShortMovies}
+        shortMovies={shortMovies}
+      />
+      {preloader ? <Preloader/> : (
+        <MovieList
+          movies={savedMovies}
+          removeMovie={removeMovie}
+          searchMessageError={searchMessageError}
+          showMessage={showMessage}
         />
-        {preloader ? <Preloader /> : (
-            <MovieList
-                movies={savedMovies}
-                removeMovie={removeMovie}
-                searchMessageError={searchMessageError}
-                showMessage={showMessage}
-            />
-        )}
-      </section>
+      )}
+    </section>
   );
 };
 
